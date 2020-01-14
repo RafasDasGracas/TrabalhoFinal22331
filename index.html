@@ -23,11 +23,30 @@
 </head>
 
 <body>
+<!-- Primeiro Titulo -->
+  <h1 class="ml1">
+  <p class="text-center">
+  <span class="text-success">
+    <span class="line line1"></span>
+    <span class="letters">Sanctis</span>
+    <span class="line line2"></span>
+  </span>
+</h1>
+</p>
 
- <h1 class="site-heading text-center text-warning d-none d-lg-block">
-    <span class="site-heading-upper text-success mb-3">Sanctis</span>
-    <span class="site-heading-lower">Venha ser feliz na festa da assentis</span>
-  </h1>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+<!-- Segundo Titulo -->
+ <h1 class="ml1">
+  <p class="text-center">
+  <span class="text-warning">
+    <span class="line line1"></span>
+    <span class="letters">Venha Ser Feliz Na Festa Da Assentis</span>
+    <span class="line line2"></span>
+  </span>
+</h1>
+</p>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
   <!-- Navegação -->
   <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
     <div class="container">
@@ -35,7 +54,7 @@
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
+      <div class="shake shake-little collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav mx-auto">
           <li class="nav-item active px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="index.html">Home
@@ -43,7 +62,7 @@
             </a>
           </li>
           <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="about.html">About</a>
+            <a class="nav-link text-uppercase text-expanded" href="about.html">Sobre</a>
           </li>
           <li class="nav-item px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="products.html">Products</a>
@@ -100,6 +119,65 @@
   <!-- JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Script do Primeiro Titulo-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+  <script>
+jQuery(function($){
+$('.ml1 .letters').each(function(){
+ $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+});
+
+anime.timeline({loop: true})
+ .add({
+ targets: '.ml1 .letter',
+ scale: [0.3,1],
+ opacity: [0,1],
+ translateZ: 0,
+ easing: "easeOutExpo",
+ duration: 600,
+ delay: function(el, i) {
+ return 70 * (i+1)
+ }
+ }).add({
+ targets: '.ml1 .line',
+ scaleX: [0,1],
+ opacity: [0.5,1],
+ easing: "easeOutExpo",
+ duration: 700,
+ offset: '-=875',
+ delay: function(el, i, l) {
+ return 80 * (l - i);
+ }
+ }).add({
+ targets: '.ml1',
+ opacity: 0,
+ duration: 1000,
+ easing: "easeOutExpo",
+ delay: 1000
+ });
+});
+textWrapper = document.querySelector('.ml12');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+<!-- Script do Primeiro Titulo-->
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml12 .letter',
+    translateX: [40,0],
+    translateZ: 0,
+    opacity: [0,1],
+    easing: "easeOutExpo",
+    duration: 1200,
+    delay: (el, i) => 500 + 30 * i
+  }).add({
+    targets: '.ml12 .letter',
+    translateX: [0,-30],
+    opacity: [1,0],
+    easing: "easeInExpo",
+    duration: 1100,
+    delay: (el, i) => 100 + 30 * i
+  });
+</script>
 
 </body>
 
