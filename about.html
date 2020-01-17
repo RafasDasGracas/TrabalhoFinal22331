@@ -7,29 +7,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-
-  <title>Business Casual - Start Bootstrap Theme</title>
+<!-- Titulo do Site -->
+  <title>Festa Assentis</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/csshake.min.css">
 
-  <!-- Custom fonts for this template -->
+  <!-- Fonts costumizadas deste template -->
   <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
 
-  <!-- Custom styles for this template -->
+  <!-- Estilos Costumizados deste template -->
   <link href="css/business-casual.min.css" rel="stylesheet">
 
 </head>
 
 <body>
+<!-- Primeiro Titulo -->
+  <h1 class="ml1">
+  <p class="text-center">
+  <span class="text-success">
+    <span class="line line1"></span>
+    <span class="letters">Sanctis</span>
+    <span class="line line2"></span>
+  </span>
+</h1>
+</p>
 
-  <h1 class="site-heading text-center text-white d-none d-lg-block">
-    <span class="site-heading-upper text-primary mb-3">A Free Bootstrap 4 Business Theme</span>
-    <span class="site-heading-lower">Business Casual</span>
-  </h1>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 
-  <!-- Navigation -->
+<!-- Segundo Titulo -->
+ <h1 class="ml1">
+  <p class="text-center">
+  <span class="text-warning">
+    <span class="line line1"></span>
+    <span class="letters">Venha Ser Feliz Na Festa Da Assentis</span>
+    <span class="line line2"></span>
+  </span>
+</h1>
+</p>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+  <!-- Navegação -->
   <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
     <div class="container">
       <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">Start Bootstrap</a>
@@ -44,10 +64,10 @@
             </a>
           </li>
           <li class="nav-item active px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="about.html">About</a>
+            <a class="nav-link text-uppercase text-expanded" href="about.html">Sobre</a>
           </li>
           <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="products.html">Products</a>
+            <a class="nav-link text-uppercase text-expanded" href="products.html">Curiosidades</a>
           </li>
           <li class="nav-item px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="store.html">Store</a>
@@ -65,11 +85,11 @@
           <div class="col-xl-9 col-lg-10 mx-auto">
             <div class="bg-faded rounded p-5">
               <h2 class="section-heading mb-4">
-                <span class="section-heading-upper">Strong Coffee, Strong Roots</span>
-                <span class="section-heading-lower">About Our Cafe</span>
+                <span class="section-heading-upper">Assentis</span>
+                <span class="section-heading-lower">Um Paraíso no Conselho de Torres Novas</span>
               </h2>
-              <p>Founded in 1987 by the Hernandez brothers, our establishment has been serving up rich coffee sourced from artisan farmers in various regions of South and Central America. We are dedicated to travelling the world, finding the best coffee, and bringing back to you here in our cafe.</p>
-              <p class="mb-0">We guarantee that you will fall in <em>lust</em> with our decadent blends the moment you walk inside until you finish your last sip. Join us for your daily routine, an outing with friends, or simply just to enjoy some alone time.</p>
+              <p>A freguesia de Assentis é formada por um vasto conjunto de lugares e povoações: Alvorão, Assentis, Beselga de Baixo, Beselga de Cima, Carvalhal do Pombo, Casais de Igreja, Casal da Estrada, Casal da Fonte, Casal das Pimenteiras, Charruada, Fungalvaz, Moreiras Grandes, Moreiras Pequenas, Outeiro Grande, Outeiro Pequeno, Vales de Baixo e Vales de Cima.</p>
+              <p class="mb-0">Rezam as lendas que a freguesia foi palco de uma carnificina de cristãos por parte dos Romanos e aqui foram descobertas presumíveis ossadas dos mártires da extinta cidade de Concórdia, uma cidade da antiga Lusitânia (segundo a Enciclopédia Portuguesa e Brasileira). Daí o topónimo Assentis derivar de “assen”, uma derivação de “Loco de Sanctis”. No vizinho lugar de Beselga, antiga cidade de Besulci, foi encontrada uma coluna de pedra trabalhada em espiral que comprova a presença de habitantes neste período romano. A freguesia juntou ao longo dos séculos um rico património, espelhado na igreja-matriz em honra de Nossa Senhora da Purificação, e nas inúmeras capelas seculares das povoações. Destaque ainda para os dois cruzeiros, em Assentis e Carvalhal do Pombo.</p>
             </div>
           </div>
         </div>
@@ -79,13 +99,73 @@
 
   <footer class="footer text-faded text-center py-5">
     <div class="container">
-      <p class="m-0 small">Copyright &copy; Your Website 2019</p>
+      <p class="m-0 small">Copyright &copy; Rafael Graça Nº22331</p>
     </div>
   </footer>
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Java Script-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+  <script>
+jQuery(function($){
+$('.ml1 .letters').each(function(){
+ $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+});
+
+anime.timeline({loop: true})
+ .add({
+ targets: '.ml1 .letter',
+ scale: [0.3,1],
+ opacity: [0,1],
+ translateZ: 0,
+ easing: "easeOutExpo",
+ duration: 600,
+ delay: function(el, i) {
+ return 70 * (i+1)
+ }
+ }).add({
+ targets: '.ml1 .line',
+ scaleX: [0,1],
+ opacity: [0.5,1],
+ easing: "easeOutExpo",
+ duration: 700,
+ offset: '-=875',
+ delay: function(el, i, l) {
+ return 80 * (l - i);
+ }
+ }).add({
+ targets: '.ml1',
+ opacity: 0,
+ duration: 1000,
+ easing: "easeOutExpo",
+ delay: 1000
+ });
+});
+textWrapper = document.querySelector('.ml12');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+<!-- Script do Primeiro Titulo-->
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml12 .letter',
+    translateX: [40,0],
+    translateZ: 0,
+    opacity: [0,1],
+    easing: "easeOutExpo",
+    duration: 1200,
+    delay: (el, i) => 500 + 30 * i
+  }).add({
+    targets: '.ml12 .letter',
+    translateX: [0,-30],
+    opacity: [1,0],
+    easing: "easeInExpo",
+    duration: 1100,
+    delay: (el, i) => 100 + 30 * i
+  });
+</script>
 
 </body>
 
